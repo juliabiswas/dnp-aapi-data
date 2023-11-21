@@ -1,14 +1,14 @@
 # dnp-aapi-data
 Demographic data often misrepresents marginalized communities, whether it be through overgeneralizing experiences by aggregating data when it shouldn’t, omitting entire communities from the data altogether, or categorizing individuals as “other." Asian American Pacific Islander (AAPI) people are particularly at risk, being misrepresented in all kinds of data from cardiovascular risk data to education data. These issues are not only inherently harmful but also inflict more harm when problematic data is used to develop AI. In an investigation of data bias against AAPI people, I employed machine learning and data analysis on Census microdata: I analyzed the effects of disaggregating race data, compared various approaches to coding data on multiracial and multiethnic people, and studied the effects of including race data in AI.
 
-To do so, I built an AAPI socioeconomic dataset using lasso regression, indexing, and a correlation matrix on the Census microdata. You can find the data dictionary for the dataset [here](https://docs.google.com/document/d/1hGPmwgD06HIE2_xxVq_vM5hiXBkpkHPKOc7wLQHmA8M/edit). With income as the target, I trained 6 machine learning models with the dataset, each with a different level of ethnoracial data. In order of best-performing to worst-performing:
-(1) **ethnicity (other):** with only ethnicity data, all multiethnic and multiracial people classified as "other"
-(2) **ethnicity (census):** with only ethnicity data, including some categories for multiethnic people
-(3) **race:** with only race data, including categories for multiracial people
-(4) **race (other):** with only race data, all multiracial people classified as "other"
-(5) **no ethnoracial data:** with no race or ethnicity data
-(6) **ethnicity:** with only ethnicity data, including categories for multiethnic people 
-
+To do so, I built an AAPI socioeconomic dataset using lasso regression, indexing, and a correlation matrix on the Census microdata. You can find the data dictionary for the dataset [here](https://docs.google.com/document/d/1hGPmwgD06HIE2_xxVq_vM5hiXBkpkHPKOc7wLQHmA8M/edit). With income as the target, I trained 6 machine learning models with the dataset, each with a different level of ethnoracial data. In order of best-performing to worst-performing:  
+(1) **ethnicity (other):** with only ethnicity data, all multiethnic and multiracial people classified as "other"  
+(2) **ethnicity (census):** with only ethnicity data, including some categories for multiethnic people  
+(3) **race:** with only race data, including categories for multiracial people  
+(4) **race (other):** with only race data, all multiracial people classified as "other"  
+(5) **no ethnoracial data:** with no race or ethnicity data  
+(6) **ethnicity:** with only ethnicity data, including categories for multiethnic people   
+  
 (1), (2), and (4) were categories already given with Census data, and (3) and (6) were created by me based on the data as alternative approaches to coding data on multiracial and multiethnic people.
 
 The results show the following:  
